@@ -14,6 +14,11 @@ PostgreSQL Tutorial.txt
 25 16
 26
 
+- Terminology
+
+statement
+clause
+
 - Section 1. Getting started with PostgreSQL
 
 - Load database 
@@ -48,3 +53,25 @@ psql -U postgres -c 'CREATE DATABASE dvdrental;'
 pg_restore -c -U postgres -d dvdrental dvdrental.tar
 pg_restore -c -U postgres -d dvdrental dvdrental.tar
 # Not sure why run pg_restore twice works...
+
+- Section 2. Querying Data
+- SELECT
+
+SELECT
+ first_name,
+ last_name,
+ email
+FROM
+ customer;
+
+- ORDER BY
+
+Sort the result set returned from the SELECT statement by using the PostgreSQL ORDER BY clause.
+
+SELECT - statement
+FROM - clause
+ORDER BY - clause
+
+https://dba.stackexchange.com/questions/171979/what-actually-is-a-sql-clause?newreg=d30f31dbd4cd4ff8b0adbe163c2c48b3
+In general terms, a clause is just a logical chunk of a SQL statement - and, usually, is a chunk that is (theoretically) optional.
+
